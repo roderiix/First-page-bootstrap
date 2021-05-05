@@ -57,7 +57,7 @@ body{
 	background-color: rgba(255, 115, 115,0.6);
 	margin: 20px;
 	border: 1px solid black;
-	width: 1000px;
+	width: 1300px;
 	float:left;
 }
 .articulo{
@@ -73,13 +73,6 @@ body{
 	margin:10px;
 }
 
-
-.columna{
-	margin: 20px;
-	border: 1px solid black;
-	width: 500px;
-	float:left;
-}
 .pie{
 	clear: both;
 	text-align: left;
