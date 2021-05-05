@@ -1,0 +1,93 @@
+.agrupar{
+	width: 1600px;
+	background-color: rgba(222, 221, 221, 0.3);
+	margin: auto;
+	border: 1px solid black;
+}
+
+.cabeza{
+	background-color: rgba(173, 247, 253,0.6);
+	padding: 10px;
+	border: 1px solid black;
+	margin: 2px;
+}
+.cabeza li{
+	display: inline;
+	padding: 40px;
+}
+.cabeza img{
+	width: 60px;
+	display: inline;
+}
+.cabeza h1{
+	display: inline;
+}
+
+
+body{
+	text-align: center;
+	
+}
+
+.navegacion li{
+	margin-top: 10px;
+	display: inline;
+	padding: 30px;
+}
+
+.navegacion{
+	border: 1px solid black;
+	padding: 2px;
+	background-color: rgba(171, 195, 197, 0.6);
+	border: 1px solid black;
+	margin: 2px;
+}
+
+.navegacion a{
+	color: black;
+}
+.foto1{
+	padding: 2px;
+}
+
+.foto1 img{
+	width: 100%;
+	height: 100px;
+}
+.seccion{
+	background-color: rgba(222, 221, 221,0.8);
+	margin: 20px;
+	border: 1px solid black;
+	width: 1000px;
+	float:left;
+}
+.articulo img{
+	width: 400px;
+	height: 400px;
+}
+.columna{
+	margin: 20px;
+	border: 1px solid black;
+	width: 500px;
+	float:left;
+}
+.pie{
+	clear: both;
+	text-align: left;
+	margin: 20px;
+	border:1px solid black;
+}
+
+.pie h3{
+	margin-left:30px; 
+}
+.pie img{
+	width: 60px;
+}
+
+.pie a{
+	color:white;
+}
+.pie li{
+	list-style: none;
+}
