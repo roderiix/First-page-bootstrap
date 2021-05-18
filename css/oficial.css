@@ -1,0 +1,100 @@
+
+#titulo{
+    background-color: rgb(70, 70, 70);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent, 25px, rgba(6, 2, 61, 0.5) 40px);
+}
+
+#titulo::after{
+    content: '';
+    background-color: transparent;
+    display: block;
+    height: 20px;
+    width: 50px;
+    margin: 0 auto;
+    position: relative;
+    left: auto;
+    margin-top: -40px;
+}
+
+#msg{
+    background-color: rgb(70, 70, 70);
+    position: relative;
+    margin-top: -20px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+#separador{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#separador .content{
+    width: 150%;
+    height: 150px;
+    margin-left: -25%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.catalogo h4{
+    color: white;
+}
+
+.card-border{
+    border: solid 10px white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+.card-border:hover{
+    transform: scale(1.05);
+}
+
+#zapatilla{
+    background: rgb(255, 255, 255);
+    background-image: url(../img/fondorojo.jpg),linear-gradient(0deg, rgb(243, 146, 146), 0%, rgba(163, 0, 0, 0.808) 57%);
+    background-repeat: repeat-x;
+    background-size: 75%;
+    margin-top: -20px;
+}
+#zapatilla .container-md h1{
+    color: white;
+}
+
+#separador2{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#separador2 .content{
+    width: 150%;
+    height: 150px;
+    margin-left: -25%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#conocenos{
+    background: rgb(255, 255, 255);
+    background-image:linear-gradient(0deg, rgb(45, 47, 160), 0%, rgba(10, 32, 90, 0.808) 57%);
+    background-repeat: repeat-x;
+    background-size: 75%;
+    margin-top: -20px;
+}
+
+.sobre h2{
+    color: white;
+}
+.sobre p{
+    color: white;
+}
+.sobre h3{
+    color: white;
+}
+
+.sob h1{
+    color: white;
+}
