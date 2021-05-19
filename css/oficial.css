@@ -54,7 +54,7 @@
 
 #zapatilla{
     background: rgb(255, 255, 255);
-    background-image: url(../img/fondorojo.jpg),linear-gradient(0deg, rgb(243, 146, 146), 0%, rgba(163, 0, 0, 0.808) 57%);
+    background-image: linear-gradient(0deg, rgb(221, 79, 43), 45%, rgba(192, 2, 2, 0.808) 57%);
     background-repeat: repeat-x;
     background-size: 75%;
     margin-top: -20px;
@@ -79,7 +79,7 @@
 
 #conocenos{
     background: rgb(255, 255, 255);
-    background-image:linear-gradient(0deg, rgb(45, 47, 160), 0%, rgba(10, 32, 90, 0.808) 57%);
+    background-image:linear-gradient(0deg, rgb(228, 137, 18), 30%, rgba(221, 79, 43, 1) 57%);
     background-repeat: repeat-x;
     background-size: 75%;
     margin-top: -20px;
@@ -87,14 +87,105 @@
 
 .sobre h2{
     color: white;
+    color: white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .sobre p{
     color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .sobre h3{
     color: white;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .sob h1{
     color: white;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#separador3{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#separador3 .content{
+    width: 150%;
+    height: 150px;
+    margin-left: -25%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#contacto{
+    background: rgb(255, 255, 255);
+    background-image:linear-gradient(0deg, rgb(248, 193, 10), 25%, rgba(228, 137, 18, 1) 57%);
+    background-repeat: repeat-x;
+    background-size: 75%;
+    margin-top: -20px;
+}
+
+.titulo{
+    color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#separador4{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#separador4 .content{
+    width: 150%;
+    height: 150px;
+    margin-left: -25%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#pie-pag{
+    background: rgb(255, 255, 255);
+    background-image:linear-gradient(0deg, rgb(54, 54, 54), 25%, rgb(80, 77, 77) 57%);
+    background-repeat: repeat-x;
+    background-size: 75%;
+    margin-top: -20px;
+}
+.pie-li{
+    color: white;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#pie-pag .s{
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bi{
+    font-size: 40px;
+}
+
+#pie .col{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#pie ul{
+    list-style: none;
+}
+
+#video{
+    background: rgb(255, 255, 255);
+    background-image: linear-gradient(0deg, rgb(221, 79, 43), 45%, rgba(192, 2, 2, 0.808) 57%);
+    background-repeat: repeat-x;
+    background-size: 75%;
+    margin-top: -20px;
 }

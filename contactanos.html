@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="bs/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/oficial.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<title>Custom HoodBoyz</title>
 </head>
 <body>
@@ -30,12 +31,119 @@
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item"><a class="nav-link" href="#titulo">Inicio</a></li>
 						<li class="nav-item"><a class="nav-link" href="#zapatilla">Catalogo</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contactos">Contacto</a></li>
 						<li class="nav-item"><a class="nav-link" href="#conocenos">Sobre</a></li>
+						<li class="nav-item"><button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#login-modal">Iniciar Sesión</button></li>
+						<li class="nav-item"><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signup-modal">Registrarse</button></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
+	<!-Inicio sesion/-->
+		<div id="login-modal" class="modal" tabindex="-1">
+			<div class="modal-dialog">
+			  	<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Iniciar sesion</h5>
+			  			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+			
+					<div class="modal-body">
+			  			<form>
+
+							<div class="container p-1 row">
+								<label for="mail">Ingrese su correo</label>
+									<input class="entrada" type="mail" id="email" required>
+							</div>
+
+							<div class="container p-1 row">
+								<label for="contraseña">Ingrese su contraseña</label>
+								<input class="entrada"type="password" id="contraseña" required>
+							</div>
+							
+						</form>
+					</div>
+		
+					<div class="modal-footer">
+			  			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			  			<button type="button" class="btn btn-primary">Iniciar sesion</button>
+					</div>
+			  	</div>
+			</div>
+	  	</div>
+		  
+	<!-Registro/-->
+	<div id="signup-modal" class="modal" tabindex="-1">
+		<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Registrarse</h5>
+					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+		
+				<div class="modal-body">
+					<form>
+						  
+						<div class="container p-1 row">
+							<input class="entrada" type="text" id="name" minlength="3" required placeholder="Ingrese su Nombre">
+						</div>
+
+						<div class="container p-1 row">
+							<input class="entrada" type="text" id="apellido" minlength="3" required placeholder="Ingrese su Apellido">
+						</div>
+						<div class="container p-1 row">
+							<input class="entrada" type="number" id="numero" required placeholder="Ingrese su Numero">
+						</div>
+						<div class="container p-1 row">
+							<input class="entrada" type="mail" id="email" required placeholder="Ingrese su Email">
+						</div>
+						<div class="container p-1 row">
+							<input class="entrada"type="password" id="contraseña" required placeholder="Ingrese una Contraseña">
+						</div>
+
+						<div class="container p-1 row">
+							<input class="entrada"type="text" id="region" minlength="3" required placeholder="Ingrese su Region">
+						</div>
+						
+						<div class="container p-1 row">
+							<input class="entrada"type="text" id="ciudad" minlength="3" required placeholder="Ingrese su Ciudad">
+						</div>
+						
+						<div class="container p-1 row">
+							<input class="entrada"type="text" id="comuna" minlength="3" required placeholder="Ingrese su Comuna">
+						</div>
+
+						<div class="container p-1 row">
+							<input class="entrada"type="text" id="calle" minlength="3" required placeholder="Ingrese su Calle">
+						</div>
+
+						<div class="container p-1 row">
+							<input class="entrada"type="numero" id="casa" minlength="3" required placeholder="Ingrese numero de Casa">
+						</div>
+
+						<div class="container p1 row">
+							<h3>Sexo</h3>
+							<label>
+				    			<input class="elegir"type="radio" name="sexo">Hombre
+							</label>
+							<label>
+								<input class="elegir"type="radio" name="sexo">Mujer
+							</label>
+						</div>
+
+						<div class="container p1 row">
+							<p><input type="checkbox" required>Aceptar, Terminos y 	condiciones</p>
+						</div>
+					</form>
+				</div>
+	
+				<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					  <button type="button" class="btn btn-primary">Registrarse</button>
+				</div>
+			  </div>
+		</div>
+	  </div>
 	<!-Titulo/-->	
 		<div id="titulo" class="container-fluid">
 			<div id="msg" class="container w-50 ps-5">
@@ -46,6 +154,7 @@
 				</div>
 			</div>
 		</div>
+
 	<!-carrousel/-->
 		<div class="carousel slide" id="mainSlider" data-bs-ride="carousel">
 			<div class="carousel-inner">
@@ -69,6 +178,9 @@
 			<div class="container-md p-5">
 				<div class="catalogo row pt-5">
 					<h1 class="text-center">Catalogo</h1>
+				</div>
+				<div class="subt1 row pt-5">
+					<h2 class="titulo">Zapatillas</h2>
 				</div>
 				<div class="row pt-5">
 					<div class="col-sm">
@@ -105,10 +217,86 @@
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div class="subt2 row pt-5">
+					<h2 class="titulo">Poleras</h2>
+				</div>
+				<div class="row pt-5">
+					<div class="col-sm">
+						<div class="card card-border" style="width: 18rem;">
+							<img src="img/polera WST 4.png" class="card-img-top" alt="...">
+							<div class="card-body">
+							  <h5 class="card-title">Card title</h5>
+							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
 						  </div>
+					</div>
+					<div class="col-sm">
+						<div class="card card-border" style="width: 18rem;">
+							<img src="img/Untitled-1.png" class="card-img-top" alt="...">
+							<div class="card-body">
+							  <h5 class="card-title">Card title</h5>
+							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						  </div>
+					</div>
+					<div class="col-sm">
+						<div class="card card-border" style="width: 18rem;">
+							<img src="img/DERRICK ROSE POELRA CUSTOMISADA.png" class="card-img-top" alt="...">
+							<div class="card-body">
+							  <h5 class="card-title">Card title</h5>
+							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						  </div>
+					</div>
+					<div class="col-sm">
+						<div class="card card-border" style="width: 18rem;">
+							<img src="img/CAMISA WESTSIDE STORY.png" class="card-img-top" alt="...">
+							<div class="card-body">
+							  <h5 class="card-title">Card title</h5>
+							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	<!-separador/-->
+		<div id="separador2">
+			<div class="content bg-dark"></div>
+		</div>
+	<!-video/-->
+		<div id="video">
+			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+			  	<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  	<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				</div>
+
+				<div class="carousel-inner">
+				  	<div class="carousel-item active">
+						<div class="ratio ratio-16x9">
+							<iframe src="video/v2.mp4" title="Custom HoodBoyz" allowfullscreen></iframe>
+						</div>
+				  	</div>
+				  	<div class="carousel-item">
+						<div class="ratio ratio-16x9">
+							<iframe src="video/v1.mp4" title="Custom HoodBoyz" allowfullscreen></iframe>
+						  </div>
+				  	</div>
+				</div>
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				  	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  	<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				  	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+	  		</div>
 		</div>
 	<!-separador/-->
 		<div id="separador2">
@@ -150,8 +338,57 @@
 				</div>
 			</div>
 		</div>
-
+	<!-separador/-->
+		<div id="separador3">
+			<div class="content bg-dark"></div>
+		</div>
 	<!-Footer/-->
+		<footer id="pie-pag">
+			<div class="container-md p-5">
+				<div id="pie" class="row pt-5">
+					<div class="t col">
+						<h3 class="s">Productos</h3>
+						<ul>
+							<li><a class="pie-li" href="#">Zapatillas</a></li>
+							<li><a class="pie-li" href="#">Poleras</a></li>
+							<li><a class="pie-li" href="#">Gorros</a></li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3 class="s">Asistencia</h3>
+						<ul>
+							<li><a class="pie-li" href="#">¿Necesitas ayuda?</a></li>
+							<li><a class="pie-li" href="#">Servicio al cliente</a></li>
+							<li><a class="pie-li" href="#">Preguntas frecuentes</a></li>
+							<li><a class="pie-li" href="#">Productos</a></li>
+							<li><a class="pie-li" href="#">Pedidos</a></li>
+							<li><a class="pie-li" href="#">Pago</a></li>
+							<li><a class="pie-li" href="#">Envio</a></li>
+							<li><a class="pie-li" href="#">Devoluciones</a></li>
+							<li><a class="pie-li" href="#">Como usar nuestro sitio</a></li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3 class="s">Terminos y Condiciones</h3>
+						<ul>
+							<li><a class="pie-li" href="#">Terminos y Condiciones</a></li>
+							<li><a class="pie-li" href="#">Politica de Privacidad</a></li>
+							<li><a class="pie-li" href="#">Terminos y Condiciones de uso del sitio</a></li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3 id="contactos" class="s">Contactos</h3>
+						<ul>
+							<li><i class="bi bi-instagram"></i></li>
+							<li><i class="bi bi-whatsapp"></i></li>
+							<li><i class="bi bi-discord"></i></a></li>
+							<li><i class="bi bi-facebook"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
 	<script src="js/jquery.js"></script>
 	<script src="bs/js/popper.min.js"></script>
 	<script src="bs/js/bootstrap.min.js"></script>
