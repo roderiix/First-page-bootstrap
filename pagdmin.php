@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+<?php
+	session_start();
+?>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +14,7 @@
 	<title>Custom HoodBoyz</title>
 </head>
 <body>
-	<!-NAVBAR/-->
+	<!--NAVBAR/-->
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
@@ -33,119 +37,70 @@
 						<li class="nav-item"><a class="nav-link" href="#zapatilla">Catalogo</a></li>
 						<li class="nav-item"><a class="nav-link" href="#contactos">Contacto</a></li>
 						<li class="nav-item"><a class="nav-link" href="#conocenos">Sobre</a></li>
-						<li class="nav-item"><button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#login-modal">Iniciar Sesión</button></li>
-						<li class="nav-item"><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signup-modal">Registrarse</button></li>
+                        <li class="nav-item"><a class="nav-link" href="pedidos.php">Pedidos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php">salir</a></li>			
 					</ul>
 				</div>
 			</div>
-		</nav>
-	<!-Inicio sesion/-->
-		<div id="login-modal" class="modal" tabindex="-1">
-			<div class="modal-dialog">
-			  	<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Iniciar sesion</h5>
-			  			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-			
-					<div class="modal-body">
-			  			<form>
-
-							<div class="container p-1 row">
-								<label for="mail">Ingrese su correo</label>
-									<input class="entrada" type="mail" id="email" required>
-							</div>
-
-							<div class="container p-1 row">
-								<label for="contraseña">Ingrese su contraseña</label>
-								<input class="entrada"type="password" id="contraseña" required>
-							</div>
-							
-						</form>
-					</div>
-		
-					<div class="modal-footer">
-			  			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-			  			<button type="button" class="btn btn-primary">Iniciar sesion</button>
-					</div>
-			  	</div>
-			</div>
-	  	</div>
-		  
-	<!-Registro/-->
+		</nav>		  
+	<!--Pedido/-->
 	<div id="signup-modal" class="modal" tabindex="-1">
 		<div class="modal-dialog">
 			  <div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Registrarse</h5>
+					<h5 class="modal-title">Pedido</h5>
 					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 		
 				<div class="modal-body">
-					<form>
+					<form action="crearpedido.php" method="POST">
 						  
 						<div class="container p-1 row">
-							<input class="entrada" type="text" id="name" minlength="3" required placeholder="Ingrese su Nombre">
+							<input class="entrada" type="text" name="name" minlength="3" required placeholder="Ingrese su Nombre">
 						</div>
 
 						<div class="container p-1 row">
-							<input class="entrada" type="text" id="apellido" minlength="3" required placeholder="Ingrese su Apellido">
-						</div>
-						<div class="container p-1 row">
-							<input class="entrada" type="number" id="numero" required placeholder="Ingrese su Numero">
-						</div>
-						<div class="container p-1 row">
-							<input class="entrada" type="mail" id="email" required placeholder="Ingrese su Email">
-						</div>
-						<div class="container p-1 row">
-							<input class="entrada"type="password" id="contraseña" required placeholder="Ingrese una Contraseña">
+							<input class="entrada" type="text" name="apellido" minlength="3" required placeholder="Ingrese su Apellido">
 						</div>
 
 						<div class="container p-1 row">
-							<input class="entrada"type="text" id="region" minlength="3" required placeholder="Ingrese su Region">
+							<input class="entrada" type="number" name="numero" required placeholder="Ingrese su Numero telefono">
+						</div>
+
+						<div class="container p-1 row">
+							<input class="entrada" type="mail" name="email" required placeholder="Ingrese su Email">
+						</div>
+
+						<div class="container p-1 row">
+							<input class="entrada"type="text" name="region" minlength="3" required placeholder="Ingrese su Region">
 						</div>
 						
 						<div class="container p-1 row">
-							<input class="entrada"type="text" id="ciudad" minlength="3" required placeholder="Ingrese su Ciudad">
+							<input class="entrada"type="text" name="ciudad" minlength="3" required placeholder="Ingrese su Ciudad">
 						</div>
 						
 						<div class="container p-1 row">
-							<input class="entrada"type="text" id="comuna" minlength="3" required placeholder="Ingrese su Comuna">
+							<input class="entrada"type="text" name="comuna" minlength="3" required placeholder="Ingrese su Comuna">
 						</div>
 
 						<div class="container p-1 row">
-							<input class="entrada"type="text" id="calle" minlength="3" required placeholder="Ingrese su Calle">
+							<p><input name="aceptar" type="checkbox" required> Aceptar, Terminos y condiciones</p>
 						</div>
 
 						<div class="container p-1 row">
-							<input class="entrada"type="numero" id="casa" minlength="3" required placeholder="Ingrese numero de Casa">
-						</div>
-
-						<div class="container p1 row">
-							<h3>Sexo</h3>
-							<label>
-				    			<input class="elegir"type="radio" name="sexo">Hombre
-							</label>
-							<label>
-								<input class="elegir"type="radio" name="sexo">Mujer
-							</label>
-						</div>
-
-						<div class="container p1 row">
-							<p><input type="checkbox" required>Aceptar, Terminos y 	condiciones</p>
+							<button type="submit" class="btn btn-primary">Pedir</button>
 						</div>
 					</form>
 				</div>
 	
 				<div class="modal-footer">
 					  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					  <button type="button" class="btn btn-primary">Registrarse</button>
 				</div>
 			  </div>
 		</div>
 	  </div>
 
-	<!-Titulo/-->	
+	<!--Titulo/-->	
 		<div id="titulo" class="container-fluid">
 			<div id="msg" class="container w-50 ps-5">
 				<div class="row align-items-center">
@@ -156,7 +111,7 @@
 			</div>
 		</div>
 
-	<!-carrousel/-->
+	<!--carrousel/-->
 		<div class="carousel slide" id="mainSlider" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
@@ -170,11 +125,11 @@
 				</div>
 			</div>
 		</div>
-	<!-separador/-->
+	<!--separador/-->
 		<div id="separador">
 			<div class="content bg-dark"></div>
 		</div>
-	<!-zapatillas/-->
+	<!--zapatillas/-->
 		<div id="zapatilla">
 			<div class="container-md p-5">
 				<!--
@@ -250,9 +205,14 @@
 					  	<span class="visually-hidden">Next</span>
 					</button>
 				</div>-->
+
 				
 				<div class="catalogo row pt-5">
 					<h1 class="text-center">Catalogo</h1>
+				</div>
+
+				<div class="subt1 row pt-5">
+					<h2 class="titulo">Pedido Personalizado</h2>
 				</div>
 				
 				<div class="subt1 row pt-5">
@@ -265,6 +225,7 @@
 							<div class="card-body">
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#signup-modal">Pedir</button>
 							</div>
 						</div>
 					</div>
@@ -274,6 +235,7 @@
 							<div class="card-body">
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#signup-modal">Pedir</button>
 							</div>
 						</div>
 					</div>
@@ -283,6 +245,7 @@
 							<div class="card-body">
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#signup-modal">Pedir</button>
 							</div>
 						</div>
 					</div>
@@ -292,13 +255,14 @@
 							<div class="card-body">
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#signup-modal">Pedir</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
 
-				<div class="subt2 row pt-5">
+				<div class="subt1 row pt-5">
 					<h2 class="titulo">Poleras</h2>
 				</div>
 				<div class="row pt-5">
@@ -308,6 +272,7 @@
 							<div class="card-body">
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#signup-modal">Pedir</button>
 							</div>
 						  </div>
 					</div>
@@ -317,6 +282,7 @@
 							<div class="card-body">
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#signup-modal">Pedir</button>
 							</div>
 						  </div>
 					</div>
@@ -326,6 +292,7 @@
 							<div class="card-body">
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#signup-modal">Pedir</button>
 							</div>
 						  </div>
 					</div>
@@ -335,17 +302,18 @@
 							<div class="card-body">
 							  <h5 class="card-title">Card title</h5>
 							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#signup-modal">Pedir</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	<!-separador/-->
+	<!--separador/-->
 		<div id="separador2">
 			<div class="content bg-dark"></div>
 		</div>
-	<!-video/-->
+	<!--video/-->
 		<div id="video">
 			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-indicators">
@@ -376,11 +344,11 @@
 				</button>
 	  		</div>
 		</div>
-	<!-separador/-->
+	<!--separador/-->
 		<div id="separador3">
 			<div class="content bg-dark"></div>
 		</div>
-	<!-conocenos/-->
+	<!--conocenos/-->
 		<div id="conocenos">
 			<div class="container-md p-5">
 				<div class="sob row pt-5">
@@ -416,13 +384,13 @@
 				</div>
 			</div>
 		</div>
-	<!-separador/-->
+	<!--separador/-->
 		<div id="separador4">
 			<div class="content bg-dark">
 				<div class="container"></div>
 			</div>
 		</div>
-	<!-Footer/-->
+	<!--Footer/-->
 		<footer id="pie-pag">
 			<div class="container-md p-5">
 				<div id="pie" class="row pt-2">
